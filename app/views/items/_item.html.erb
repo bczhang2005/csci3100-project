@@ -1,26 +1,72 @@
-<div class="item">
-  <h1><%= item.name %></h3>
+<div class="head-title">
+  <h1>✨ Marketplace</h1>
+  <p>Discover amazing items from our community!</p>
+</div>
 
-  <div class='item-head'></div>
+<div class="item-detail-container">
+  <div class="item-card-detail">
+    <div class="item-layout">
+      <div class="image-section">
+        <% if @item.photo.attached? %>
+          <%= image_tag @item.photo, class:"main-image" %>
+        <% else %>
+          <div class="no-image">
+            <div class="no-image-icon">📷</div>
+            <p>No image available</p>
+          </div>
+        <% end %>
+      </div>
 
-  <div class='flex-container'>
-    <div class='left'>
-      <p>description: <%= item.description %></p>
-      <p>price: $<%= item.price %></p>
-      <p>post date: <%= item.post_date %></p>
-      <p>seller: <%= item.seller.name %></p>
-      
-      <%= link_to 'Back to items', items_path, class: "btn btn-outline-info item-btn" %>
+      <div class="info-section">
+        <span class="item-category">
+          <%= @item.category %>
+        </span>
+        
+        <h1 class="item-name"><%= @item.name %></h1>
+        
+        <div class="price-section">
+          <div class="price-label">Price</div>
+          <div class="price-value">$<%= @item.price %></div>
+        </div>
+        
+        <div class="description-section">
+          <div class="description-title">📝 Description</div>
+          <div class="description-text"><%= @item.description %></div>
+        </div>
+
+        <div class="seller-card">
+          <div class="seller-info">
+            <h4>
+              <%= @item.seller&.name || "Unknown Seller" %>
+            </h4>
+            <p>Member since <%= @item.seller&.created_at&.strftime("%B %Y") || "Recently" %></p>
+          </div>
+        </div>
+
+        <div class="meta-info">
+          <div class="meta-item">
+            <div class="meta-icon">📅</div>
+            <div>
+              <div class="meta-label">Posted Date</div>
+              <div class="meta-value"><%= @item.post_date %></div>
+            </div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-icon">👁️</div>
+            <div>
+              <div class="meta-label">Views</div>
+              <div class="meta-value">1 times</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class='right'>
-      <% if @item.photo.attached? %>
-      <%= image_tag @item.photo, class: "img-fluid", style: "max-width: 400px" %>
-      
-      <% else %>
-      <p>No image available</p>
-      <% end %>
-    </div>
-
+  <div class="item-btn-container">
+    <div class="item-btn-dummy"></div>
+    <%= link_to "Purchase", "#", class: "btn-new item-btn" %>
+    <%= link_to "← Back to Market", items_path, class: "btn-new item-btn" %>
+    <div class="item-btn-dummy"></div>
   </div>
 </div>
