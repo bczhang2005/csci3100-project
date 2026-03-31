@@ -1,11 +1,15 @@
-<div class="item">
-  <h1>Your Item</h1>
+<div class="head-title">
+  <h1>✨ Marketplace</h1>
+  <p>Discover amazing items from our community!</p>
+</div>
 
-  <%= render "form", item: @item %>
+<div class="form-container">
+  <div class="form-card">
+    <div class="form-header">
+      <h1>💡 Post New Item</h1>
+      <p>Share your item with the community!</p>
+    </div>
 
-  <br>
-
-  <div>
-    <%= link_to "Back to items", items_path, class:"btn btn-outline-info item-btn" %>
+    <%= render "form", item: @item %>
   </div>
 </div>
