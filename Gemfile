@@ -26,7 +26,6 @@ gem "pundit"
 gem "ransack"
 gem "sidekiq"
 gem "redis"
-gem "webrick"
 
 gem "simplecov", group: :test, require: false
 
