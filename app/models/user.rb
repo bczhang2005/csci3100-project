@@ -8,8 +8,11 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: :password_present?
 
   def self.find_seller_id(name)
-    find_by("name ILIKE ?", "%#{name}%").id
+    clean_name = name.to_s.strip
+    user = find_by("name ILIKE ?", "%#{clean_name}%")
+    user&.id
   end
+
 
   def generate_password_reset_code!
     self.password_reset_code = rand(100000..999999).to_s
