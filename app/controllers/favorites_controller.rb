@@ -8,12 +8,12 @@ class FavoritesController < ApplicationController
   def create
     @item = Item.find(params[:item_id])
     current_user.favorites.find_or_create_by(item: @item)
-    redirect_to @item, notice: "Added to favorites successfully!"
+    redirect_to @item
   end
 
   def destroy
     favorite = current_user.favorites.find_by(item_id: params[:id])
     favorite&.destroy
-    redirect_to request.referer || items_path, notice: "Removed from favorites successfully!"
+    redirect_to request.referer || items_path
   end
 end

@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get "/user/:user_id/password", to: "sessions#edit", as: "edit_user_password"
   patch "/user/:user_id/update", to: "sessions#update", as: "user_update"
 
-  resources :favorites, only: [:index, :destroy] do
+  resources :favorites, only: [:index, :create, :destroy] do
     collection do
       post :create, to: "favorites#create"
     end
