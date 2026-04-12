@@ -27,6 +27,7 @@ gem "ransack"
 gem "sidekiq"
 gem "sidekiq-cron"
 gem "redis"
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem "simplecov", group: :test, require: false
 
