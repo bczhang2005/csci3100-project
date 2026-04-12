@@ -36,15 +36,15 @@ class User < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
   has_many :favorite_items, through: :favorites, source: :item
-  
+
   has_secure_password
 
   before_validation :normalize_location
 
   validates :name, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
-  validates :password, presence: true, length: { minimum: 6 }
-  validates :password_confirmation, presence: true, if: :password_present?
+  validates :password, presence: { on: :create }, length: { minimum: 6 }
+  validates :password_confirmation, presence: { on: :create }, if: :password_present?
 
   def self.find_seller_id(name)
     clean_name = name.to_s.strip

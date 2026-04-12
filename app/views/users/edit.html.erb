@@ -1,0 +1,95 @@
+<div class="item-detail-container">
+  <div class="item-card-detail">
+    <!-- Centered Layout -->
+    <div class="item-layout" style="max-width: 80vw; margin: 0 auto;">
+      
+      <div class="info-section">
+        
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <h1 class="item-name" style="margin-bottom: 0.5rem;">Edit Profile</h1>
+          <p style="color: #6b7280;">Update your account details below</p>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 2rem 0;">
+
+        <%= form_with(model: @user, local: true) do |form| %>
+          
+          <!-- Error Handling -->
+          <% if @user.errors.any? %>
+            <div class="seller-card" style="border-color: #ef4444; margin-bottom: 1.5rem;">
+              <h4 style="color: #ef4444;">⚠️ <%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h4>
+              <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+                <% @user.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <!-- Name Field -->
+          <div class="meta-info" style="display: block;">
+            <div class="meta-label">Display Name</div>
+            <%= form.text_field :name, class: "meta-value", style: "width: 100%; padding: 0.5rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; margin-top: 0.25rem;" %>
+          </div>
+
+          <!-- Email Field -->
+          <div class="meta-info" style="display: block; margin-top: 1.5rem;">
+            <div class="meta-label">Email Address</div>
+            <%= form.email_field :email, class: "meta-value", style: "width: 100%; padding: 0.5rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; margin-top: 0.25rem;" %>
+          </div>
+
+          <!-- Location Field -->
+          <div class="meta-info" style="display: block; margin-top: 1.5rem;">
+            <div class="meta-label">Location</div>
+            <%= form.select :location, 
+                [
+                  ["Chung Chi College", "Chung Chi College"],
+                ["United College", "United College"],
+                ["New Asia College", "New Asia College"],
+                ["Shaw College", "Shaw College"],
+                ["Wu Yee Sun College", "Wu Yee Sun College"],
+                ["Lee Woo Sing College", "Lee Woo Sing College"],
+                ["S.H. HO College","S.H. HO College"],
+                ["Morningside College","Morningside College"],
+                ["CW Chu College","CW Chu College"]
+                ], 
+                { include_blank: "Select your location" }, 
+                { class: "meta-value", style: "width: 100%; padding: 0.5rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; margin-top: 0.25rem; background-color: white;" } 
+            %>
+          </div>
+
+          <!-- Password Section -->
+          <div class="seller-card" style="margin-top: 2rem;">
+            <div class="seller-info">
+              <h4>🔐 Change Password (Optional)</h4>
+              <p style="font-size: 0.9rem; color: #6b7280;">Leave blank if you don't want to change it.</p>
+            </div>
+            
+            <div style="margin-top: 1rem;">
+            <div class="meta-label">New Password</div>
+        <!-- Note: No 'required' attribute here -->
+            <%= form.password_field :password, class: "meta-value", style: "width: 100%; padding: 0.5rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; margin-top: 0.25rem; box-sizing: border-box;" %>
+            </div>
+  
+        <div style="margin-top: 1rem;">
+        <div class="meta-label">Confirm Password</div>
+            <%= form.password_field :password_confirmation, class: "meta-value", style: "width: 100%; padding: 0.5rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; margin-top: 0.25rem; box-sizing: border-box;" %>
+        </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="item-btn-container" style="margin-top: 2rem;">
+            <div class="item-btn-dummy"></div>
+            <%= form.submit "Save Changes", class: "btn-new item-btn" %>
+            <%= link_to "Cancel", user_path(@user), class: "btn-new item-btn" %>
+            <div class="item-btn-dummy"></div>
+          </div>
+
+        <% end %>
+        <!-- Form End -->
+
+      </div>
+    </div>
+  </div>
+</div>
