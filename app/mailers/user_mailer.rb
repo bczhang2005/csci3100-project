@@ -88,7 +88,7 @@ class UserMailer < ApplicationMailer
       
       #{@code}
       
-      This code will expire in 15 minutes.
+      This code will expire in 1 hour.
       
       If you didn't request this password reset, please ignore this email.
       
