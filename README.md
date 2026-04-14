@@ -133,7 +133,7 @@ The table below summarizes the features currently implemented in the codebase. P
 | --- | --- | --- | --- |
 | Basic CRUD Feature | Main menu + Item display + Post item + Edit user profile + Naive purchase and reserve function | `LI Xiaodong` | `BING Zhe` |
 | Account Register and Login, Control Logic | Register with name, email, location and password; Login with name and password, reset password etc. | `LI Xiaodong` | `BING Zhe` |
-| Search and filtering | Search by keyword and filter by category, status, seller location, price range, and recent posting days | ``HUANG Ruilin`` | `[Fill in]` |
+| Search and Filtering | Search by keyword and filter by category, status, seller location, price range, and recent posting days | ``HUANG Ruilin`` | `[Fill in]` |
 | Favorite Systems | Add to/Remove from favorites, and view favorite list | `ZHANG Beichen` | `HUANG Ruilin` |
 | PostgreSQL Database | Resolve migration, PostgreSQL connection | `[Fill in]` | `[Fill in]` |
 | Advanced Feature: Analytics | View charts and summaries for listing activity, categories, status, pricing, and community activity | `HUANG Ruilin` | `[Fill in]` |
