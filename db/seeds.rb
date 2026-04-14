@@ -62,8 +62,7 @@ items = [
     post_date: "2026-04-06",
     status: "available",
     category: "electronics",
-    seller_id: users[0].id,
-    image_path: "app/assets/images/macbook.jpeg"
+    seller_id: users[0].id
   },
   {
     name: "MacBook Air M2",
@@ -72,8 +71,7 @@ items = [
     post_date: "2026-04-01",
     status: "reserved",
     category: "electronics",
-    seller_id: users[1].id,
-    image_path: "app/assets/images/macbook.jpeg"
+    seller_id: users[1].id
   },
   {
     name: "iPhone 13",
@@ -82,8 +80,7 @@ items = [
     post_date: "2026-04-03",
     status: "reserved",
     category: "electronics",
-    seller_id: users[0].id,
-    image_path: "app/assets/images/macbook.jpeg"
+    seller_id: users[0].id
   },
   {
     name: "iPhone 13 Pro",
@@ -92,8 +89,7 @@ items = [
     post_date: "2026-04-02",
     status: "available",
     category: "electronics",
-    seller_id: users[2].id,
-    image_path: "app/assets/images/macbook.jpeg"
+    seller_id: users[2].id
   },
   {
     name: "iPad Pro",
@@ -102,8 +98,7 @@ items = [
     post_date: "2026-04-01",
     status: "available",
     category: "electronics",
-    seller_id: users[0].id,
-    image_path: "app/assets/images/macbook.jpeg"
+    seller_id: users[0].id
   },
   {
     name: "Microeconomics Textbook",
@@ -112,8 +107,7 @@ items = [
     post_date: "2026-04-02",
     status: "sold",
     category: "books",
-    seller_id: users[1].id,
-    image_path: "app/assets/images/novel.jpeg"
+    seller_id: users[1].id
   },
   {
     name: "Bicycle",
@@ -122,8 +116,7 @@ items = [
     post_date: "2026-03-28",
     status: "available",
     category: "sports",
-    seller_id: users[0].id,
-    image_path: "app/assets/images/bicycle.jpeg"
+    seller_id: users[0].id
   },
   {
     name: "Guitar",
@@ -132,8 +125,7 @@ items = [
     post_date: "2026-03-15",
     status: "available",
     category: "other",
-    seller_id: users[1].id,
-    image_path: "app/assets/images/guitar.jpeg"
+    seller_id: users[1].id
   },
   {
     name: "Lamp",
@@ -142,8 +134,7 @@ items = [
     post_date: "2026-03-22",
     status: "available",
     category: "furniture",
-    seller_id: users[2].id,
-    image_path: "app/assets/images/lamp.jpeg"
+    seller_id: users[2].id
   },
   {
     name: "Novel",
@@ -152,8 +143,7 @@ items = [
     post_date: "2026-02-25",
     status: "available",
     category: "books",
-    seller_id: users[0].id,
-    image_path: "app/assets/images/novel.jpeg"
+    seller_id: users[0].id
   },
   {
     name: "Desk Lamp",
@@ -162,8 +152,7 @@ items = [
     post_date: "2026-04-05",
     status: "available",
     category: "furniture",
-    seller_id: users[1].id,
-    image_path: "app/assets/images/lamp.jpeg"
+    seller_id: users[1].id
   },
   {
     name: "Gaming Chair",
@@ -172,8 +161,7 @@ items = [
     post_date: "2026-03-10",
     status: "available",
     category: "furniture",
-    seller_id: users[2].id,
-    image_path: "app/assets/images/lamp.jpeg"
+    seller_id: users[2].id
   },
   {
     name: "Calculus Notes Bundle",
@@ -182,8 +170,7 @@ items = [
     post_date: "2026-04-04",
     status: "available",
     category: "books",
-    seller_id: users[3].id,
-    image_path: "app/assets/images/novel.jpeg"
+    seller_id: users[3].id
   },
   {
     name: "Badminton Racket",
@@ -192,8 +179,7 @@ items = [
     post_date: "2026-03-29",
     status: "reserved",
     category: "sports",
-    seller_id: users[4].id,
-    image_path: "app/assets/images/bicycle.jpeg"
+    seller_id: users[4].id
   },
   {
     name: "Monitor 24 inch",
@@ -202,13 +188,12 @@ items = [
     post_date: "2026-04-04",
     status: "available",
     category: "electronics",
-    seller_id: users[3].id,
-    image_path: "app/assets/images/macbook.jpeg"
+    seller_id: users[3].id
   }
 ]
 
 items.each do |data|
-  item = Item.create!(
+  Item.create!(
     name: data[:name],
     description: data[:description],
     price: data[:price],
@@ -217,16 +202,6 @@ items.each do |data|
     category: data[:category],
     seller_id: data[:seller_id]
   )
-
-  if File.exist?(data[:image_path])
-    item.photo.attach(
-      io: File.open(data[:image_path]),
-      filename: File.basename(data[:image_path]),
-      content_type: "image/jpeg"
-    )
-  else
-    puts "Image not found: #{data[:image_path]}"
-  end
 end
 
 locations_list = [
