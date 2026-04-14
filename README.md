@@ -167,6 +167,7 @@ You can also add a short note below the screenshot:
 - The SendGrid API offcial sending requires a formal domain name, this project only uses single sender API, so it comes from personal .gmail address. Possibly needs to look up in trash mail folder. Email send might take up to 5 minutes.
 - Access to the Sidekiq dashboard (for background job monitoring) is strictly restricted to Admin users only. Regular users are denied access to ensure system security and prevent unauthorized operation monitoring.
 - Users can choose to purchase or reserve items. Once they have reserved an item, it could not be purchased or reserved by any other users.
+- Only the user who posted the item can delete it.
 - Some Hidden rules for users from different college (SaaS Angle):
   (1) Users from Chung Chi College will see items from Chung Chi College and S.H.HO College listed with priority
   (2) Users from United College will see items from United College and New Asia College listed with priority
