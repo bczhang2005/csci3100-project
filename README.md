@@ -122,8 +122,6 @@ Run Cucumber features:
 bundle exec cucumber
 ```
 
-`TODO:` If your team also used RSpec examples in practice, add the exact command here.
-
 
 ## Implemented Features
 
@@ -150,6 +148,11 @@ The table below summarizes the features currently implemented in the codebase. P
 SimpleCov Report Path for Rspec: docs/coverage1.png
 SimpleCov Report Path for Cucumber: docs/coverage2.png
 ```
+**RSpec Coverage Report:**
+![RSpec Coverage](docs/coverage1.png)
+
+**Cucumber Coverage Report:**
+![Cucumber Coverage](docs/coverage2.png)
 
 
 ## Demo / Deployment
