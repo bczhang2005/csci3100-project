@@ -156,10 +156,14 @@ You can also add a short note below the screenshot:
 
 ## Demo / Deployment
 
-`TODO:` Add your deployed URL, demo video link, or leave this section out if not required.
-
-- Demo URL: `[Fill in]`
+- Demo URL: <https://csci3100-proj.onrender.com/>
 - Demo video: `[Fill in]`
 
 ## Side notes
 - The SendGrid API offcial sending requires a formal domain name, this project only uses single sender API, so it comes from personal .gmail address. Possibly needs to look up in trash mail folder. Email send might take up to 5 minutes.
+
+- SaaS Angle: Different Colleges implies different listing rules, here we set a few as examples:
+United College users will be shown to items pages with priority given to those from United College and New Asia College, also the for Chun Chi College. (this minics based on geographically locations and real college relations, effect will disappear after "sort" filter been set).
+Items from Shaw College can only be reserved for Shaw College users (minicing the college regulation).
+
+- 
