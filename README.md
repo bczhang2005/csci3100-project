@@ -12,7 +12,7 @@ Campus Trade is a secondhand trading website for the Chinese University of Hong 
 | `BING Zhe` | `1155210946` | `Ranger-BZ` |
 | `LI Xiaodong` | `1155211265` | `derekli-114` |
 | `ZHANG Beichen` | `1155211153` | `bczhang2005` |
-| `[Member 4]` | `[1155xxxxxx]` | `[github-id]` |
+| `[Member 5]` | `[1155xxxxxx]` | `[github-id]` |
 
 ## Setup Guide
 
@@ -134,12 +134,14 @@ The table below summarizes the features currently implemented in the codebase. P
 | Basic CRUD Feature | Main menu + Item display + Post item + Edit user profile + Naive purchase and reserve function | `LI Xiaodong` | `BING Zhe` |
 | Account Register and Login | Register with name, email, location and password; Login with name and password | `LI Xiaodong` | `[Fill in]` |
 | Login email restrictions | Register with validated `@link.cuhk.edu.hk` email | `HUANG Ruilin` | `[Fill in]` |
+| Search and filtering | Search by keyword and filter by category, status, seller location, price range, and recent posting days | `[Fill in]` | `[Fill in]` |
+| Favorite Systems | Add to/Remove from favorites, and view favorite list | `ZHANG Beichen` | `HUANG Ruilin` |
+| PostgreSQL Database | Resolve migration, PostgreSQL connection | `[Fill in]` | `[Fill in]` |
 | Advanced Feature: Analytics | View charts and summaries for listing activity, categories, status, pricing, and community activity | `HUANG Ruilin` | `[Fill in]` |
 | Advanced Feature: Search | Fuzzy search, Auto-complete | `HUANG Ruilin` | `[Fill in]` |
-| Search and filtering | Search by keyword and filter by category, status, seller location, price range, and recent posting days | `[Fill in]` | `[Fill in]` |
 | Advanced Feature: external APIs | Mapbox for location maps, SendGrid email verification | `BING Zhe` | `N.A` |
 | Advanced Feature: Sidekiq/Redis | Sidekiq/Redis for background jobs and scheduled tasks | `ZHANG Beichen` | `[Fill in]` |
-| Favorite Systems | Add to/Remove from favorites, and view favorite list | `ZHANG Beichen` | `HUANG Ruilin` |
+
 
 ## SimpleCov Report Screenshot
 
@@ -162,6 +164,7 @@ You can also add a short note below the screenshot:
 
 ## Side notes
 - The SendGrid API offcial sending requires a formal domain name, this project only uses single sender API, so it comes from personal .gmail address. Possibly needs to look up in trash mail folder. Email send might take up to 5 minutes.
+- Access to the Sidekiq dashboard (for background job monitoring) is strictly restricted to Admin users only. Regular users are denied access to ensure system security and prevent unauthorized operation monitoring.
 - Users can choose to purchase or reserve items. Once they have reserved an item, it could not be purchased or reserved by any other users.
 - Some Hidden rules for users from different college (SaaS Angle):
   (1) Users from Chung Chi College will see items from Chung Chi College and S.H.HO College listed with priority
