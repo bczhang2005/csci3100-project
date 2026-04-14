@@ -161,6 +161,7 @@ SimpleCov Report Path for Cucumber: docs/coverage2.png
 - Demo video: `handed later in BlackBoard`
 
 ## Side notes
+- The production is deployed on render (for consistent database use, and image display function, costing 13 USD$ in total for our group. (potenially also for SendGrid)
 - The test coverage differs about 10% on local production and githubs setting, possible due to simple-cov versions variations.
 - The SendGrid API offcial sending requires a formal domain name, this project only uses single sender API, so it comes from personal .gmail address. Possibly needs to look up in trash mail folder. Email send might take up to 5 minutes. (The sendGrid may throw 404 in our tests for continous sends / invalid address / exceeds respond ratio)
 - Access to the Sidekiq dashboard (for background job monitoring) is strictly restricted to Admin users only. Regular users are denied access to ensure system security and prevent unauthorized operation monitoring.
