@@ -8,11 +8,11 @@ Market Place is a secondhand trading website for the Chinese University of Hong 
 
 | Name | Student ID | GitHub Username |
 | --- | --- | --- |
-| `HUANG Ruilin` | `1155211049` | `cuhk11049` |
-| `BING Zhe` | `1155210946` | `Ranger-BZ` |
-| `LI Xiaodong` | `1155211265` | `derekli-114` |
-| `ZHANG Beichen` | `1155211153` | `bczhang2005` |
-| `ZHU Ruizheng` | `1155210937` | `CCCCOrz` |
+| `XXX` | `XXX` | `XXX` |
+| `XXX` | `XXX` | `XXX` |
+| `XXX` | `XXX` | `XXX` |
+| `ZHANG Beichen` | `XXX` | `bczhang2005` |
+| `XXX` | `XXX` | `XXX` |
 
 ## Setup Guide
 
@@ -129,17 +129,17 @@ The table below summarizes the features currently implemented in the codebase. P
 
 | Feature | Description | Primary Contributor | Other Contributors |
 | --- | --- | --- | --- |
-| Basic CRUD Feature | Main menu + Item display + Post item + Edit user profile + Naive purchase and reserve function | `LI Xiaodong` | `BING Zhe` |
-| Account Register and Login, Control Logic | Register with name, email, location and password; Login with name and password, reset password etc. | `LI Xiaodong` | `BING Zhe` |
-| Search and Filtering | Search by keyword and filter by category, status, seller location, price range, and recent posting days | ``HUANG Ruilin`` | `N. A.` |
-| Favorite Systems | Add to/Remove from favorites, and view favorite list | `ZHANG Beichen` | `HUANG Ruilin` |
-| PostgreSQL Database | Resolve migration, PostgreSQL connection | `ZhANG Beichen` | `Others` |
-| Advanced Feature: Analytics | View charts and summaries for listing activity, categories, status, pricing, and community activity | `HUANG Ruilin` | `N. A.` |
-| Advanced Feature: Search | Fuzzy search, Auto-complete | `HUANG Ruilin` | `N. A.` |
-| Advanced Feature: external APIs | Mapbox for location maps, SendGrid email verification | `BING Zhe` | `N. A.` |
+| Basic CRUD Feature | Main menu + Item display + Post item + Edit user profile + Naive purchase and reserve function | `XXX` | `XXX` |
+| Account Register and Login, Control Logic | Register with name, email, location and password; Login with name and password, reset password etc. | `XXX` | `XXX` |
+| Search and Filtering | Search by keyword and filter by category, status, seller location, price range, and recent posting days | `XXX` | `N. A.` |
+| Favorite Systems | Add to/Remove from favorites, and view favorite list | `ZHANG Beichen` | `XXX` |
+| PostgreSQL Database | Resolve migration, PostgreSQL connection | `ZHANG Beichen` | `Others` |
+| Advanced Feature: Analytics | View charts and summaries for listing activity, categories, status, pricing, and community activity | `XXX` | `N. A.` |
+| Advanced Feature: Search | Fuzzy search, Auto-complete | `XXX` | `N. A.` |
+| Advanced Feature: external APIs | Mapbox for location maps, SendGrid email verification | `XXX` | `N. A.` |
 | Advanced Feature: Sidekiq/Redis | Sidekiq/Redis for background jobs and scheduled tasks | `ZHANG Beichen` | `N. A.` |
-| Cucumber tests | Cucumber tests in folder "features", including _steps.rb (except for web_steps.rb) and all .features files | `ZHU Ruizheng` | `N. A.` |
-| RSpec tests | RSpec tests for controllers and models | `ZHU Ruizheng` | `N. A.` |
+| Cucumber tests | Cucumber tests in folder "features", including _steps.rb (except for web_steps.rb) and all .features files | `XXX` | `N. A.` |
+| RSpec tests | RSpec tests for controllers and models | `XXX` | `N. A.` |
 
 
 ## SimpleCov Report Screenshots
